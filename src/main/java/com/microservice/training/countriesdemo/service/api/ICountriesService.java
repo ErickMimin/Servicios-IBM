@@ -1,12 +1,15 @@
 package com.microservice.training.countriesdemo.service.api;
 
-import com.microservice.training.countriesdemo.model.Country;
+import com.microservice.training.countriesdemo.model.entity.CountryEntity;
+
 import java.util.List;
 
 public interface ICountriesService {
 
-  List<Country> findCountriesByContinentName(String continentName);
+	List<CountryEntity> findCountriesByContinentName(String continentName);
   
-  List<Country> findCountriesByContinentId(Integer continentId);
+	CountryEntity findCountriesById(Integer countryId);
+	
+	CountryEntity newCountry(CountryEntity country); 
   
 }
